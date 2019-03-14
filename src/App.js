@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GridWrapper from './components/Grid/GridWrapper';
+import GridItem from './components/Grid/GridItem';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <GridWrapper>
+          <GridItem />
+        </GridWrapper>
+        <GridWrapper>
+          <GridWrapper width="4">
+            <GridItem />
+          </GridWrapper>
+          <GridWrapper width="7">
+            <GridItem />
+            <GridItem />
+            <GridItem />
+          </GridWrapper>
+        </GridWrapper>
       </div>
     );
   }
